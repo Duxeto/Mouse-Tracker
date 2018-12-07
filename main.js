@@ -17,7 +17,7 @@ function draw() {
     } else {
         dx = (mouseX - x) *0.03;
         dy = (mouseY - y) *0.03;
-        if(Math.abs(dx) + Math.abs(dy) < 0.05) {
+        if(Math.abs(dx) + Math.abs(dy) < 0.1) {
             x = mouseX;
             y = mouseY;
         } else {
@@ -32,11 +32,11 @@ function draw() {
 
 //Events
 
-document.addEventListener("mousemove", mouseHandler);
+document.addEventListener("click", mouseHandler);
 
 
 function mouseHandler(event) {
     console.log(event);
-    mouseX = event.pageX;
-    mouseY = event.pageY;
+    mouseX = event.clientX;
+    mouseY = event.clientY;
 }
