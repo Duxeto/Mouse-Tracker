@@ -32,7 +32,7 @@ function draw() {
 
 //Events
 
-document.addEventListener("click", mouseHandler);
+document.addEventListener("mousemove", mouseHandler);
 
 
 function mouseHandler(event) {
